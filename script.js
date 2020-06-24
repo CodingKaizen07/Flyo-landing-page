@@ -1,7 +1,16 @@
-let themeBtn = document.querySelector("#theme");
-let img = document.querySelector("#theme-logo")
-let bodyy = document.querySelector("body");
+let menuBtn = document.querySelector("#phone-menu");
+let navBar = document.querySelector("nav");
 
-themeBtn.addEventListener("click", function()
+menuBtn.addEventListener("click", function()
 {
+
+    if(navBar.style.display === "none")
+    {
+        return navBar.style.display = "block";
+    }
+
+    else
+    {
+        return navBar.style.display = "none";
+    }
 })
