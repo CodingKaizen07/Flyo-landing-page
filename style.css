@@ -21,7 +21,7 @@ header
     justify-content: space-between;
     align-items: center;
     border-color: white;
-    
+    margin: 0 0 0 0;
 }
 
 #logo
@@ -29,10 +29,23 @@ header
     margin: 0 0 0 5px ;
 }
 
+#theme
+{
+    text-decoration: none;
+    color: white;
+}
+
 
 .nav-links
 {
     text-decoration: none;
+    color: white;
+    margin: 0 5px 0 5px;
+}
+
+.nav-links:hover
+{
+    text-decoration: underline;
     color: white;
     margin: 0 5px 0 5px;
 }
@@ -78,6 +91,11 @@ main img
     width: 40%;
     border-radius: 20px;
     padding: 10px;
+}
+
+#startedBtn:hover
+{
+    transform: scale(1.1);
 }
 /******************************BOXES******************************/
 
@@ -173,6 +191,26 @@ main img
     justify-content: space-evenly;
 }
 
+.quoteContainer
+{
+    position: relative;
+}
+
+#quote1
+{
+    position: absolute;
+    left:-40px;
+    top:-10px;
+}
+
+#quote2
+{
+    position: absolute;
+    right:-40px;
+    bottom:-10px;
+    transform: rotateY(180deg);
+}
+
 .reviewBox
 {
     
@@ -200,52 +238,19 @@ main img
     display: inline-block;
 }
 
-
-/*****************FORM*************************/
-footer
+#form-container
 {
-    position: relative;
-   
-    background-color: hsl(216, 53%, 9%);
-    margin: 20% 0 0 0;
     display: flex;
-    justify-content: space-evenly;
-    
+    justify-content: center;
 }
-
-.footer-links
-{
-    
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 25% 0 0 0;
-}
-
-.footer-links a
-{
-    margin: 10px 0 10px 0;
-    color: white;
-    text-decoration: none;
-}
-
-.footer-links a:hover
-{
-    text-decoration: underline;
-}
-
 
 form
 {
-    position: absolute;
-    top:-104px;
-    left: 10%;
-    right: 10%;
     text-align: center;
     padding: 30px;
-    background-color: hsl(217, 28%, 15%);
+    background-color: hsl(216, 53%, 9%);
+    margin: 10% 0 0 0;
     width: 80vw;
-    
 }
 
 form h1
@@ -270,7 +275,46 @@ form p
     padding: 10px;
     border-radius: 20px;
     margin: 0 0 0 10px;
+    background-color: hsl(176, 68%, 64%);
+    border-style: none;
 }
+
+#submit:hover
+{
+    transform: scale(1.2);
+}
+
+
+/*****************FORM*************************/
+footer
+{   
+    background-color: hsl(216, 53%, 9%);
+    margin: 0 0 0 0;
+    display: flex;
+    justify-content: space-evenly;   
+}
+
+.footer-links
+{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10% 0 0 0;
+}
+
+.footer-links a
+{
+    margin: 10px 0 10px 0;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover
+{
+    text-decoration: underline;
+}
+
 
 
 /**************MEDIA********************/
@@ -368,20 +412,22 @@ form p
     {
         flex-direction: column;
         align-items: center;
-        margin: 40% 0 0 0;
-
+        margin: 0 0 0 0;
     }
 
     .footer-links
     {
          align-items: center;
-         border-style: solid;
          width: 100%;
+         margin: 10px 0 0 0;
     }
 
-    .chik
+
+
+    form 
     {
-        margin: 60% 0 0 0;
+        width: 90%;
+        background-color: hsl(216, 53%, 9%);
     }
 
     form h1
@@ -403,4 +449,63 @@ form p
     
 
 
+}
+
+@media (max-width:500px)
+{
+
+    header
+    {
+        height: 10vh
+    }
+
+    nav
+    {
+        display:none;
+        position: absolute;
+        top: 66px;
+        height: 90vh;
+        width: 100%;
+        background-color: hsl(218, 28%, 13%);
+    }
+
+    nav ul
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul a
+    {
+        width: 100%;
+        text-align: center;
+        padding: 35px;
+    }
+
+    .nav-links:hover
+    {
+        color: black;
+        background-color: white;
+    }
+
+    #phone-menu
+    {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        margin: 0 15px 0px 0;
+        width: 45px;    
+    }
+
+    .menu-span
+    {
+        height: 10px;
+        width: 100%;
+        color: white;
+        padding: 10px;
+        background-color:;
+        padding: 2px;
+        border-style: solid;
+    }
 }
