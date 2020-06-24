@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body
+{
+    background-color: hsl(218, 28%, 13%);
+    color: white;
+    font-family: Open Sans;
+
+}
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-color: white;
+    
+}
+
+#logo
+{
+    margin: 0 0 0 5px ;
+}
+
+
+.nav-links
+{
+    text-decoration: none;
+    color: white;
+    margin: 0 5px 0 5px;
+}
+
+
+/**********MAIN*************/
+main
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+main img
+{
+    width: 50%;
+}
+
+#intro
+{
+    
+    border-color: white;
+    width: 60vw;
+}
+
+#intro h1
+{
+    font-size: 50px;
+}
+
+#intro p
+{
+    margin: 30px 10% 25px 10%;
+}
+
+#startedBtn
+{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: hsl(176, 68%, 64%);
+    width: 40%;
+    border-radius: 20px;
+    padding: 10px;
+}
+/******************************BOXES******************************/
+
+#boxSec
+{
+    margin: 10% 0 0 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "one two"
+    "three four";
+   
+}
+
+.one
+{
+    grid-area: one;
+}
+
+.two
+{
+    grid-area: two;
+}
+
+.three
+{
+    grid-area: three;
+}
+
+.four
+{
+    grid-area: four;
+}
+
+.boxes
+{
+    text-align: center;
+    
+    margin: 5% 15% 5% 15%;
+}
+
+.boxes img
+{
+    height: 100px;
+}
+/**********************section*********************/
+#productive
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10% 0 0 0;
+}
+
+#productiveImg img
+{
+   
+    width: 45vw;
+}
+
+
+
+#productive-intro
+{
+   
+    width: 45vw;
+}
+
+#productive-intro h1
+{
+    font-size: 50px;
+}
+
+#productive-intro p
+{
+    margin: 10px 0 10px 0;
+}
+
+#productive-a
+{
+    display: inline-block;
+    width: 40%;
+    color: hsl(176, 68%, 64%);
+}
+/***************************************************/
+
+#reviews
+{
+    margin: 10% 0 0 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.reviewBox
+{
+    
+    width: 29vw;
+    background-color: hsl(219, 30%, 18%);
+    box-shadow: white;
+    padding: 10px;
+}
+
+.reviewBox:hover
+{
+    color: black;
+    background-color: white;
+    transform: scale(1.2);
+}
+
+#reviews img
+{
+    width:40px;
+    border-radius: 50%;
+}
+
+.review-img
+{
+    display: inline-block;
+}
+
+
+/*****************FORM*************************/
+footer
+{
+    position: relative;
+   
+    background-color: hsl(216, 53%, 9%);
+    margin: 20% 0 0 0;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.footer-links
+{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 25% 0 0 0;
+}
+
+.footer-links a
+{
+    margin: 10px 0 10px 0;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover
+{
+    text-decoration: underline;
+}
+
+
+form
+{
+    position: absolute;
+    top:-104px;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+    padding: 30px;
+    background-color: hsl(217, 28%, 15%);
+    width: 80vw;
+    
+}
+
+form h1
+{
+    font-size: 50px;
+}
+
+form p
+{
+    margin: 10px 0 20px 0;
+}
+
+#email
+{
+    padding: 10px;
+    border-radius: 20px;
+    width: 50%;
+}
+
+#submit
+{
+    padding: 10px;
+    border-radius: 20px;
+    margin: 0 0 0 10px;
+}
+
+
+/**************MEDIA********************/
+@media (max-width:768px)
+{
+
+    main img
+    {
+        width: 100%;
+    }
+    
+    #intro
+    {
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+
+    #intro h1
+    {
+        font-size: 30px;
+    }
+
+/*******************BOX SECTION******************/
+
+    #boxSec
+    {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "four";
+    }
+/***************PRODUCTIVE**********************/
+
+    #productive
+    {
+        flex-direction: column;
+    }
+
+    #productiveImg img
+    {
+        width:100%
+    }
+
+    #productive-intro
+    {
+        width:100%;
+        text-align: center;
+    }
+
+    #productive-intro h1
+    {
+        font-size: 30px;
+    }
+
+    #productive-a
+    {
+        width: 100%;
+    }
+
+
+/***************REVIEW BOXES**********************/
+    #reviews
+    {
+        flex-direction: column;
+        justify-content: unset;
+        align-items: center;
+    }
+
+    .reviewBox
+    {
+        width: 80%;
+        margin: 15px 0 15px 0;
+        padding: 20px;
+    }
+
+    .reviewBox p
+    {
+        margin: 10px 0 10px 0;
+    }
+
+    .review-img p
+    {
+        margin: 0 0 0 0;
+    }
+
+
+
+
+
+/***********************FOOTER*************************/
+    footer
+    {
+        flex-direction: column;
+        align-items: center;
+        margin: 40% 0 0 0;
+
+    }
+
+    .footer-links
+    {
+         align-items: center;
+         border-style: solid;
+         width: 100%;
+    }
+
+    .chik
+    {
+        margin: 60% 0 0 0;
+    }
+
+    form h1
+    {
+        font-size: 30px;        
+    }
+
+    #email
+    {
+        width: 80%;
+    }
+
+    #submit
+    {
+        padding: 5px;
+        margin:  10px 0 0 0;
+    }
+
+    
+
+
+}
