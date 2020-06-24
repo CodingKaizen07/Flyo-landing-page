@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css">
-    <title>Document</title>
+    <title>Flyo Landing Page by Henock</title>
 </head>
 <body>
     
     <header>
 
         <div id="logo">
-            <button id="theme"><img id="theme-logo" src="images/logo.svg"></button>
+            <a id="theme" href="#"><img id="theme-logo" src="images/logo.svg"></a>
         </div>
 
-        <nav>
+
+
+        <a id="phone-menu" href="#">
+            <span class="menu-span"></span>
+            <span class="menu-span"></span>
+            <span class="menu-span"></span>
+        </a>
+        
+        <nav id="nav">
             <ul>
                 <a class="nav-links" href="#">Features</a>
                 <a class="nav-links" href="#">Team</a>
@@ -99,7 +107,9 @@
 
     <section id="reviews">
         
-        <div class="reviewBox">
+        <div class="reviewBox quoteContainer">
+
+            <img id="quote1" src="images/bg-quotes.png">
 
             <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
 
@@ -125,8 +135,10 @@
             
         </div>
 
-        <div class="reviewBox">
-
+        <div class="reviewBox quoteContainer">
+            
+            <img id="quote2" src="images/bg-quotes.png">
+            
             <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
             
             <img src="images/profile-3.jpg">
@@ -137,10 +149,12 @@
             </div>
             
         </div>
+
     </section>
 
-    <footer>
+    <div id="form-container">
         <form>
+
             <h1>Get early access today</h1>
 
             <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
@@ -149,6 +163,9 @@
 
             <button type="submit" id="submit">Get Started For Free</button>
         </form>
+    </div>
+
+    <footer>
 
         <div class="footer-links chik">
             <img src="images/logo.svg">
@@ -180,5 +197,6 @@
             <a class="social-icons" href=""><img src="images/icon-instagram.svg"></a>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
